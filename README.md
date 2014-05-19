@@ -1,4 +1,4 @@
-# detectmobile
+# detectmobile [![wercker status](https://app.wercker.com/status/abbd5829c488bad4489a52e2a1474ff4/s "wercker status")](https://app.wercker.com/project/bykey/abbd5829c488bad4489a52e2a1474ff4)
 
 Martini middleware/handler for detecting mobile device by HTTP headers. 
 This middleware will check User-Agent and Accept headers and will set X-Mobile-Device header to true/false.
@@ -15,7 +15,7 @@ import (
 
 func main() {
     m := martini.Classic()
-    m.Use(nocache.DetectMobile())
+    m.Use(detectmobile.DetectMobile())
     m.Get("/", func(mobileDevice string) string {
       // mobileDevice will be true/false depending on detection
       return "Hello world!"
